@@ -1,0 +1,13 @@
+{
+  "name": "fog",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "npm run build -w packages/sdk && cp packages/sdk/dist/fog.iife.js packages/worker/public/t.js && npm run build -w packages/worker",
+    "dev": "npm run dev -w packages/worker",
+    "deploy": "npm run deploy -w packages/worker",
+    "test": "npm run test -w packages/sdk && npm run test -w packages/worker",
+    "typecheck": "npm run typecheck -w packages/sdk && npm run typecheck -w packages/worker",
+    "release": "npm run typecheck && npm test && npm run build && npm publish -w packages/sdk --access public"
+  }
+}

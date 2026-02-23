@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+*.log
+.DS_Store
+plans/
+
+# Local overrides (e.g., settings.local.json for machine-specific config)
+*.local.*
+
+# Task list lock file (symlinked from ~/.claude/tasks/fog/)
+tasks/.lock
+.devcontainer/
+tmp/
+screenshots/
+fogalytics-hosted/
