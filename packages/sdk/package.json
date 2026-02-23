@@ -1,0 +1,20 @@
+{
+  "name": "@fogalytics/sdk",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/fog.esm.js",
+  "browser": "dist/fog.iife.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run typecheck"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.0"
+  }
+}
